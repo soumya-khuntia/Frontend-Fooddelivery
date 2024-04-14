@@ -1,0 +1,365 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    height: 80px;
+    width: 100%;
+}
+
+/* logo and image */
+#logo{
+    margin: 34px 45px;
+}
+
+#logo img{
+    height: 57px;
+    width: 56px;
+    margin: 1px -12px;
+    border-radius: 28px;
+}
+/* Navigation bar: list styling */
+#navbar ul{
+    display: flex;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.62;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 2px 24px;
+    border-radius: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+}
+
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 164px;
+    position: relative;
+    padding-bottom: 35px;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('../images/bg2.jpg') no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+.sonu{
+    margin-bottom: 9px;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* services section */
+#services{
+    display: flex; 
+    margin: 21px;
+}
+
+#services .box{
+    border: 2px solid brown;
+    padding: 20px;
+    margin: 4px 4px;
+    margin-bottom: 18px;
+    border-radius: 23px;
+    background-color: rgb(228, 228, 228);
+}
+
+#services .box:hover{
+    background-color: rgb(214, 77, 77);
+    color: aliceblue;
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+#services .box img{
+    height: 136px;
+    display: block;
+    margin: auto;
+    border-radius: 25px;
+}
+
+#services .box p{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* clint section */
+#clint-section{
+    position: relative;
+    padding-bottom: 55px;
+}
+
+#clint-section::before{
+    content: "";
+    position: absolute;
+    background: url('../images/bg1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#clints{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.clint-item img{
+    height: 120px;
+    padding: 2px 25px;
+    border-radius: 5px;
+    mix-blend-mode: overlay;
+    filter: contrast(300%);
+}
+
+/* contact section */
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: url('../images/contact.jpg') no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 14px;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box lable{
+    font-size: 1.3rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+.submit{
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+    &:hover{
+        background-color: rgb(202, 45, 45);
+    }
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* utility classes */
+.h-primary{
+    font-size: 3.3rem;
+    padding: 20px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.h-secondary{
+    font-size: 2.4rem;
+    padding: 20px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.btn{
+    padding: 6px 22px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.3rem;
+    border-radius: 18px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(199, 30, 30);
+    }
+}
+
+.center{
+    text-align: center;
+}
+
+/* Break points */
+@media (max-width: 1026px) {
+    #home {
+        padding: 14px 90px; 
+    }
+    #home h1{
+        font-size: 2.5rem;
+    }
+    #home p{
+        font-size: 1.2rem;
+    }
+    #service-container h1{
+        font-size: 2rem;
+    }
+    #service-container .box{
+        padding: 10px;
+    }
+    .h-secondary{
+        padding: 12px;
+    }
+    #contact-box form{
+        width: 50%;
+    }
+}
+
+@media (max-width: 864px) {
+    #home {
+        padding: 14px 65px; 
+    }
+    #services{
+        flex-wrap: wrap;
+    }
+    #services .box{
+        margin: 4px 0;
+    }
+    #contact-box form{
+        width: 55%;
+    }
+}
+@media (max-width: 700px){
+    #navbar ul li a{
+        padding: 2px 12px;
+    }
+    #home {
+        padding: 14px 35px; 
+    }
+    #contact-box form{
+        width: 60%;
+    }
+}
+@media (max-width: 545px){
+    #navbar ul li a{
+        font-size: 1.2rem;
+        padding: 2px 10px;
+    }
+    #navbar{
+        height: 69px;
+    }
+    #home {
+        padding: 14px 6px;
+    }
+    #home h1{
+        font-size: 2rem;
+    }
+    #home p{
+        font-size: 1rem;
+    }
+    #logo img {
+        height: 44px;
+        width: 43px;
+        margin: 1px -25px;
+    }
+}
+@media (max-width: 545px){
+    #navbar ul li a{
+        font-size: 1rem;
+        padding: 2px 10px;
+    }
+}
+@media (max-width: 430px){
+    .h-primary{
+        font-size: 2.8rem;
+    }
+    .box h2{
+        font-size: 2rem;
+    }
+    .box p{
+        font-size: 0.91rem;
+    }
+    #contact-box form{
+        width: 70%;
+    }
+}
+@media (max-width: 373px){
+    #navbar ul li a{
+        padding: 2px 6px;
+        font-size: 0.9rem;
+    }
+    #home h1{
+        font-size: 1.6rem;
+    }
+    #home p{
+        font-size: 0.85rem;
+    }
+    #contact-box form{
+        width: 85%;
+    }
+    .clint-item img{
+        padding: 2px 10px;
+        border-radius: 100%;
+    }
+}
